@@ -62,7 +62,7 @@ Once the job completes, your application will be available at `http://localhost:
 Additionally, if you are making frontend changes, you can start a development server with
 
 ```bash
-npm start
+npm run dev
 ```
 
 Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 8000.
