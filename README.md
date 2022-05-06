@@ -29,13 +29,13 @@ To learn more before you start working with origyn_starter, see the following do
 With Git and credentials:
 
 ```
-git clone https://github.com/ORIGYN-SA/origyn_starter.git
+git clone https://github.com/ORIGYN-SA/og_starter.git
 ```
 
 With Git and SSH:
 
 ```
-git clone git@github.com:ORIGYN-SA/origyn_starter.git
+git clone git@github.com:ORIGYN-SA/og_starter.git
 ```
 
 With NPM:
