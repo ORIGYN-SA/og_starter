@@ -41,7 +41,7 @@ function HomePageView() {
         alt="logo"
       />
       <Typography variant="h4" gutterBottom>
-        Hello Internet Computer + React + Material UI
+        Hello Internet Computer + Connect2IC + React + Material UI
       </Typography>
       <Typography variant="h6" gutterBottom style={{ margin: "2rem 0" }}>
         Includes dark theme + 4 IC examples 🚀🚀🚀
@@ -58,7 +58,14 @@ function HomePageView() {
           >
             ic sdk docs
           </Link>
-
+          <Link
+            href="https://connect2ic.github.io/docs/"
+            target="_blank"
+            rel="noopener"
+            style={{ padding: "0 1rem" }}
+          >
+            connect2ic
+          </Link>
           <Link
             href="https://reactjs.org"
             target="_blank"

@@ -1,6 +1,6 @@
 # Origyn Starter
 
-Welcome to your new origyn_starter project. This template has been customized with Motoko, React and Material UI.
+Welcome to your new origyn_starter project. This template has been customized with Motoko, Connect2IC, React and Material UI.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
@@ -10,6 +10,7 @@ To learn more before you start working with origyn_starter, see the following do
 - [SDK Developer Tools](https://sdk.dfinity.org/docs/developers-guide/sdk-guide.html)
 - [Motoko Programming Language Guide](https://smartcontracts.org/docs/current/developer-docs/build/languages/motoko/)
 - [Motoko Language Quick Reference](https://sdk.dfinity.org/docs/language-guide/language-manual.html)
+- [Connect2IC](https://connect2ic.github.io/docs/)
 - [JavaScript API Reference](https://erxue-5aaaa-aaaab-qaagq-cai.raw.ic0.app)
 - [React Reference](https://reactjs.org)
 - [Material UI](https://mui.com/material-ui/getting-started/installation/)
