@@ -7,22 +7,18 @@ import {
   Typography,
   Divider,
 } from "@mui/material"
-import Logo from "/frontend/assets/logo.svg"
+import Logo from "../../components/Logo"
 import {
   ConnectButton,
-  ConnectDialog,
+  // ConnectDialog,
   // Connect2ICProvider,
   // useConnect,
 } from "@connect2ic/react"
 
 import { alpha } from "@mui/system"
-// import useSiteData from '../../hooks/useSiteData';
 import MenuList from "../../components/menu"
 
 export default function DashSidebar() {
-  // const { siteData } = useSiteData();
-  // console.log('site data', siteData, tables)
-
   return (
     <Box width="320px" bgcolor="red">
       <AppBar
@@ -52,7 +48,7 @@ export default function DashSidebar() {
               padding: "1rem 2rem",
             }}
           >
-            <img
+            {/* <img
               style={{
                 marginBottom: ".5rem",
                 cursor: "pointer",
@@ -61,7 +57,10 @@ export default function DashSidebar() {
               }}
               alt="logo"
               src={Logo}
-            />
+            /> */}
+            <Box sx={{ padding: "8px" }}>
+              <Logo />
+            </Box>
           </Box>
           <Divider />
           <MenuList />
