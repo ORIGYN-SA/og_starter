@@ -12,7 +12,7 @@ function Logo({ sx, color }) {
         height="100%"
         viewBox="0 0 110 25"
       >
-        <g clip-path="url(#prefix__clip0)">
+        <g clipPath="url(#prefix__clip0)">
           <path
             d="M2.886 6.07a.76.76 0 00-.762.764v9.251c0 1.175.463 2.303 1.287 3.137a4.429 4.429 0 003.112 1.32h1.073a1.076 1.076 0 01-.73-.332c-.193-.2-.3-.468-.302-.746V6.834a.767.767 0 00-.76-.765H2.885z"
             fill="url(#foundation0_linear)"
