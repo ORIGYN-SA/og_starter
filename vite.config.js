@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react"
 import path from "path"
 import dfxJson from "./dfx.json"
 import fs from "fs"
+import { createHtmlPlugin } from "vite-plugin-html"
 
 const isDev = process.env["DFX_NETWORK"] !== "ic"
 
@@ -55,7 +56,12 @@ const DFX_PORT = dfxJson.networks.local.bind.split(":")[1]
 // See guide on how to configure Vite at:
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    createHtmlPlugin({
+      minify: true,
+    }),
+  ],
   resolve: {
     alias: {
       // Here we tell Vite the "fake" modules that we want to define

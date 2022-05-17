@@ -1,5 +1,9 @@
 {
   "canisters": {
+    "droute": {
+      "main": "backend/droute/main.mo",
+      "type": "motoko"
+    },
     "starter": {
       "main": "backend/starter/main.mo",
       "type": "motoko"
