@@ -1,0 +1,1 @@
+Whosa is a base social graph that can be extended to build social applications.

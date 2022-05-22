@@ -1,5 +1,35 @@
 {
   "canisters": {
+    "droute": {
+      "main": "backend/droute/main.mo",
+      "type": "motoko"
+    },
+    "nisp": {
+      "main": "backend/nisp/main.mo",
+      "type": "motoko"
+    },
+    "test_runner": {
+      "main": "backend/tests/test_runner.mo",
+      "type": "motoko"
+    },
+    "test_runner_droute_utilities": {
+      "main": "backend/tests/test_runner_droute_utilities.mo",
+      "type": "motoko"
+    },
+    "test_publisher": {
+      "main": "backend/tests/test_publisher.mo",
+      "type": "motoko",
+      "dependencies": [
+        "droute"
+      ]
+    },
+    "test_nisp": {
+      "main": "backend/tests/test_nisp.mo",
+      "type": "motoko",
+      "dependencies": [
+        "nisp"
+      ]
+    },
     "starter": {
       "main": "backend/starter/main.mo",
       "type": "motoko"
@@ -23,7 +53,8 @@
   },
   "defaults": {
     "build": {
-      "packtool": ""
+      "args": "",
+      "packtool": "vessel sources"
     }
   },
   "dfx": "0.9.3",
