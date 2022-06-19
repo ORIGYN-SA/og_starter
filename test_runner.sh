@@ -1,6 +1,6 @@
 set -ex
 
-dfx identity new droute_test || true
+dfx identity new droute_test --disable-encryption || true
 dfx identity use droute_test
 
 ADMIN_PRINCIPAL=$(dfx identity get-principal)

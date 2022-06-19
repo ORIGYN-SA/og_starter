@@ -1,4 +1,3 @@
-import Welcome  "canister:welcome";
 
 actor {
     stable var currentValue: Nat = 0;
@@ -20,8 +19,4 @@ actor {
         return msg;
     };
 
-    public func sayHiFromAnotherCanister() : async Text {
-        let hi : Text = await Welcome.greetBack();
-        return hi;
-    };
 };

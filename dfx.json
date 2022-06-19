@@ -34,10 +34,7 @@
       "main": "backend/starter/main.mo",
       "type": "motoko"
     },
-    "welcome": {
-      "main": "backend/welcome/main.mo",
-      "type": "motoko"
-    },
+    
     "assets": {
       "dependencies": [
         "starter"
@@ -57,7 +54,7 @@
       "packtool": "vessel sources"
     }
   },
-  "dfx": "0.9.3",
+  "dfx": "0.10.0",
   "networks": {
     "local": {
       "bind": "127.0.0.1:8000",
