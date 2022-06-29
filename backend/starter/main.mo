@@ -98,11 +98,11 @@ actor {
         return m;
     };
 
-    //Triemap 
+    // Triemap 
     stable var _entries : [(Principal, Int)] = [];
     var _triemap = TrieMap.TrieMap<Principal,Int>(Principal.equal, Principal.hash);
 
-    //Add a Principal to Triemap without duplicate
+    // Add a Principal to Triemap without duplication
     public func addToTriemap(new_principal : Principal) : async Text {
         var msg : Text = "";
         var found : ?Int = _triemap.get(new_principal);
@@ -115,13 +115,13 @@ actor {
         return msg;
     };
 
-    //Show Triemap as a Vector
+    // Show Triemap as a Vector
     public func showTrieMap() : async [(Principal, Int)] {
         _entries := Iter.toArray(_triemap.entries());
         return _entries;
     };
 
-    //Remove a Principal from TrieMap
+    // Remove a Principal from TrieMap
     public func removeFromTrieMap(key : Principal) : async ?Int {
         _triemap.remove(key);
     };
