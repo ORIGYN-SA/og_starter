@@ -4,6 +4,7 @@ import Array "mo:base/Array";
 import TrieMap "mo:base/TrieMap";
 import Principal "mo:base/Principal";
 import Time "mo:base/Time";
+import Iter "mo:base/Iter";
 
 actor {
     stable var currentValue: Nat = 0;
@@ -103,14 +104,25 @@ actor {
 
     //Add a Principal to Triemap without duplicate
     public func addToTriemap(new_principal : Principal) : async Text {
-    var msg : Text = "";
-     var found : ?Int = _triemap.get(new_principal);
-     if(found == null){
-         msg := " Not present, whitelisted ";
-        _triemap.put(new_principal,Time.now());
-     }else{
-         msg := " This is a duplicate, not whitelisted ";
-     };
-    return msg;
+        var msg : Text = "";
+        var found : ?Int = _triemap.get(new_principal);
+        if(found == null){
+            msg := " Not present, added ";
+            _triemap.put(new_principal,Time.now());
+        }else{
+            msg := " This is a duplicate, not added ";
+        };
+        return msg;
+    };
+
+    //Show Triemap as a Vector
+    public func showTrieMap() : async [(Principal, Int)] {
+        _entries := Iter.toArray(_triemap.entries());
+        return _entries;
+    };
+
+    //Remove a Principal from TrieMap
+    public func removeFromTrieMap(key : Principal) : async ?Int {
+        _triemap.remove(key);
     };
 };
