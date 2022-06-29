@@ -1,6 +1,9 @@
 import Welcome  "canister:welcome";
 import Buffer "mo:base/Buffer";
 import Array "mo:base/Array";
+import TrieMap "mo:base/TrieMap";
+import Principal "mo:base/Principal";
+import Time "mo:base/Time";
 
 actor {
     stable var currentValue: Nat = 0;
@@ -26,7 +29,6 @@ actor {
         let hi : Text = await Welcome.greetBack();
         return hi;
     };
-    //Whitelist
 
     // Remove items from an array
     // Pass an array [Text] and remove items from array a
@@ -93,5 +95,22 @@ actor {
     public query func filter(y : [Text]) : async [Text] {
         let m = Array.filter<Text>(y , f );
         return m;
+    };
+
+    //Triemap 
+    stable var _entries : [(Principal, Int)] = [];
+    var _triemap = TrieMap.TrieMap<Principal,Int>(Principal.equal, Principal.hash);
+
+    //Add a Principal to Triemap without duplicate
+    public func addToTriemap(new_principal : Principal) : async Text {
+    var msg : Text = "";
+     var found : ?Int = _triemap.get(new_principal);
+     if(found == null){
+         msg := " Not present, whitelisted ";
+        _triemap.put(new_principal,Time.now());
+     }else{
+         msg := " This is a duplicate, not whitelisted ";
+     };
+    return msg;
     };
 };
