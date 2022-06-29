@@ -26,6 +26,7 @@ actor {
         let hi : Text = await Welcome.greetBack();
         return hi;
     };
+    //Whitelist
 
     // Remove items from an array
     // Pass an array [Text] and remove items from array a
